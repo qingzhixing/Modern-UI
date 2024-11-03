@@ -44,6 +44,60 @@ class MordernHomeState extends State<MordernHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: currentTheme().backgroundColor,
+      appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: currentTheme().backgroundColor,
+          title: Container(
+            // padding: const EdgeInsets.only(top: 10, bottom: 10),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
+              color: currentTheme().highlightColor,
+              boxShadow: [
+                BoxShadow(
+                  color: currentTheme().shadowColor,
+                  offset: const Offset(2, 0),
+                  blurRadius: 5,
+                  spreadRadius: 0,
+                ),
+                BoxShadow(
+                  color: currentTheme().highlightColor,
+                  offset: const Offset(-2, 0),
+                  blurRadius: 10,
+                  spreadRadius: 0,
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    const Padding(padding: EdgeInsets.only(top: 2)),
+                    Text(
+                      "Mordern UI",
+                      style: TextStyle(
+                        color: currentTheme().iconColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const Padding(padding: EdgeInsets.only(top: 2)),
+                    const Text(
+                      "@qingzhixing",
+                      style: TextStyle(
+                        color: Colors.pink,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 14,
+                        fontStyle: FontStyle.italic,
+                      ),
+                    ),
+                    const Padding(padding: EdgeInsets.only(top: 2)),
+                  ],
+                ),
+                const Padding(padding: EdgeInsets.only(left: 10)),
+                const Icon(Icons.cable_outlined, color: Colors.cyan)
+              ],
+            ),
+          )),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
