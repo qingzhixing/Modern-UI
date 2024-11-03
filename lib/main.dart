@@ -52,25 +52,31 @@ class MordernHomeState extends State<MordernHome> {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                color: currentTheme().backgroundColor,
-                borderRadius: const BorderRadius.all(Radius.circular(40)),
-                boxShadow: [
-                  // Right Down Shadow
-                  BoxShadow(
-                    color: currentTheme().shadowColor,
-                    offset: const Offset(5.0, 5.0),
-                    blurRadius: 15.0,
-                    spreadRadius: 1,
-                  ),
-                  // Left Up Shadow
-                  BoxShadow(
-                    offset: const Offset(-5.0, -5.0),
-                    blurRadius: 15.0,
-                    spreadRadius: 1,
-                    color: currentTheme().highlightColor,
-                  ),
-                ],
-              ),
+                  color: currentTheme().backgroundColor,
+                  // borderRadius: const BorderRadius.all(Radius.circular(40)),
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    // Right Down Shadow
+                    BoxShadow(
+                      color: currentTheme().shadowColor,
+                      offset: const Offset(5.0, 5.0),
+                      blurRadius: 10.0,
+                      spreadRadius: 1,
+                    ),
+                    // Left Up Shadow
+                    BoxShadow(
+                      offset: const Offset(-5.0, -5.0),
+                      blurRadius: 10.0,
+                      spreadRadius: 1,
+                      color: currentTheme().highlightColor,
+                    ),
+                  ],
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: currentTheme().gradientColors,
+                    stops: const [0.1, 0.3, 0.7, 0.9],
+                  )),
               child: Icon(
                 Icons.android,
                 size: 80,
