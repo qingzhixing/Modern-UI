@@ -1,3 +1,8 @@
 # mordern_ui
 
-A new Flutter project.
+A Flutter project.
+
+## Screenshot
+
+![light](assets/light.png)
+![dark](assets/dark.png)
